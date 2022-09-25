@@ -32,7 +32,19 @@
     //_ property variable itslef
     // self. --> calling the property . When we are calling the propery that mean we are  calling the getter. Lazy loading means we instantiate the object and the getter . if we do [_numbers addObject:number] we are not doing lazy loading we are just calling the variable.
     // whenever we access property within a class always use self unless we are in getter or init method
+    
+    //with mutable array and collection we can only add objects and double is not a object.
+    //Its a primitive . We cant add primitives to collections . We create wrapper classes
+    //NSNumber
 
+}
+
+-(double)popItem{
+    NSNumber *lastItem = self.numbers.lastObject;
+    if(lastItem){
+        [self.numbers removeLastObject];
+    }
+    return [lastItem doubleValue];
 }
 
 @end
