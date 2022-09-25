@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Calculator_Brain : NSObject
-
+-(void)pushItem:(double)num;
 @end
 
 NS_ASSUME_NONNULL_END
