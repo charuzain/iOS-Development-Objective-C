@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Calculator_Brain : NSObject
 -(void)pushItem:(double)num;
+-(double) calculate : (NSSstring *) oparation;
 @end
 
 NS_ASSUME_NONNULL_END
