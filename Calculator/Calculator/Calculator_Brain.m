@@ -24,6 +24,7 @@
     }
     return _numbers;
 }
+
 // method with parameters -(returnType)methodName:(paramterType)ParameterName{}
 -(void)pushItem:(double)num{
 //An array can only store objects (more precise: pointers to object). So you have to create objects which store integer
@@ -45,6 +46,22 @@
         [self.numbers removeLastObject];
     }
     return [lastItem doubleValue];
+}
+
+- (double)calculate:(NSString*)operation{
+    
+    if([operation  isEqual: @"+"]){
+        return [self popItem] + [self popItem];
+    }
+    if([operation  isEqual: @"-"]){
+        return [self popItem] - [self popItem];
+    }
+    if([operation  isEqual: @"*"]){
+        return [self popItem] * [self popItem];
+    }
+    if([operation  isEqual: @"/"]){
+        return [self popItem] / [self popItem];
+    }
 }
 
 @end
