@@ -39,16 +39,31 @@ int main(int argc, const char * argv[]) {
         
         double num1 ;
         double num2;
+        double result;
+        
+       
+   
         
         NSLog(@"Enter first number");
         scanf("%lf", &num1);
         NSLog(@"Enter Second number");
         scanf("%lf", &num2);
+//        NSLog(@"Enter operation you want to perform");
+        char input[100] = {0};
+        NSString *inputString;
+        NSLog(@"Enter operation you want to perform");
+        scanf("%s", input);
+        inputString = [NSString stringWithCString:input encoding:NSUTF8StringEncoding];
+       
+
         
         Calculator_Brain *calc = [[Calculator_Brain alloc]init];
       
         [calc pushItem:num1];
         [calc pushItem:num2];
+        result = [calc calculate:inputString];
+        NSLog(@" result of : %lf %@ %lf = %f" , num1 , inputString , num2 , result);
+        
         
         
        
