@@ -12,6 +12,9 @@
 @interface Calculator_Brain()
 
 @property (nonatomic , strong , readwrite) NSMutableArray *numbers;
+@ property double firstNum;
+@ property double secondNum;
+
 //-(double)popItem;
 @end
 
@@ -48,20 +51,26 @@
     return [lastItem doubleValue];
 }
 
-- (double)calculate:(NSString*)operation{
+-(double)calculate:(NSString*)operation{
     
     if([operation  isEqual: @"+"]){
         return [self popItem] + [self popItem];
     }
     if([operation  isEqual: @"-"]){
-        return [self popItem] - [self popItem];
+        _secondNum = [self popItem];
+        _firstNum = [self popItem];
+        
+        return _firstNum - _secondNum;
     }
     if([operation  isEqual: @"*"]){
         return [self popItem] * [self popItem];
     }
     if([operation  isEqual: @"/"]){
-        return [self popItem] / [self popItem];
+        _secondNum = [self popItem];
+        _firstNum = [self popItem];
+        return _firstNum /_secondNum;
     }
+    return -1;
 }
 
 @end
