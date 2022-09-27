@@ -32,12 +32,15 @@
 
 
 - (IBAction)setFontSize:(id)sender {
+   
     
 }
 
 - (IBAction)setBackGroundCOlor:(id)sender {
+    self.label.backgroundColor = [UIColor blackColor];
+    
 }
-
+// To change the textColor of label when button is clicked
 - (IBAction)setColor:(id)sender {
     self.label.textColor = [UIColor redColor];
 }
