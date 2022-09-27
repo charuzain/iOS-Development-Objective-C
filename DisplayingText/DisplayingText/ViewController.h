@@ -18,6 +18,9 @@
 - (IBAction)setColor:(id)sender;
 - (IBAction)setBackGroundCOlor:(id)sender;
 - (IBAction)setFontSize:(id)sender;
+- (IBAction)setShadowColor:(id)sender;
+- (IBAction)setDropShadow:(id)sender;
+
 
 @end
 
