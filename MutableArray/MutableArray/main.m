@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
         //to remove last item in object
         
         [raceTypes removeLastObject];
-        
+      
         NSUInteger size =   [raceTypes count];
         NSLog(@"%lu" , size);
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74600A9828DF309C00BAF863 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74600A9728DF309C00BAF863 /* main.m */; };
+		74600AA028DF325000BAF863 /* Calculator_Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 74600A9F28DF325000BAF863 /* Calculator_Brain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		74600A9428DF309C00BAF863 /* Calculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Calculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		74600A9728DF309C00BAF863 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74600A9E28DF325000BAF863 /* Calculator_Brain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator_Brain.h; sourceTree = "<group>"; };
+		74600A9F28DF325000BAF863 /* Calculator_Brain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator_Brain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				74600A9728DF309C00BAF863 /* main.m */,
+				74600A9E28DF325000BAF863 /* Calculator_Brain.h */,
+				74600A9F28DF325000BAF863 /* Calculator_Brain.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74600AA028DF325000BAF863 /* Calculator_Brain.m in Sources */,
 				74600A9828DF309C00BAF863 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
