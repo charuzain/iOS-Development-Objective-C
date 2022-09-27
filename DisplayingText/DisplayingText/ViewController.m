@@ -32,6 +32,24 @@
 }
 
 
+
+
+
+- (IBAction)setDropShadow:(id)sender {
+    
+    self.label.layer.shadowColor = [[UIColor blueColor]CGColor];
+    self.label.layer.opacity = 1;
+    self.label.layer.shadowRadius = 1;
+    self.label.layer.shadowOffset = CGSizeMake(2,2);
+    
+}
+
+- (IBAction)setShadowColor:(id)sender {
+    self.label.shadowColor  = [UIColor greenColor];
+    self.label.layer.shadowColor  =[[UIColor greenColor] CGColor];
+}
+
+
 - (IBAction)setFontSize:(id)sender {
    
   
@@ -40,6 +58,7 @@
     self.textView.textColor = [UIColor redColor];
     
 }
+//self represnt viewcontroler
 
 - (IBAction)setBackGroundCOlor:(id)sender {
     self.label.backgroundColor = [UIColor blackColor];
@@ -49,4 +68,21 @@
 - (IBAction)setColor:(id)sender {
     self.label.textColor = [UIColor redColor];
 }
+- (IBAction)All:(id)sender {
+    
+    self.label.textColor = [UIColor blackColor];
+    self.label.backgroundColor = [UIColor redColor];
+   [self.label setFont:[UIFont fontWithName:@"Verdana" size:82]];
+    self.label.shadowColor = [UIColor blueColor];
+    self.label.textAlignment = NSTextAlignmentRight;
+    
+}
+
+- (IBAction)Alignment:(id)sender {
+    self.label.textAlignment = NSTextAlignmentRight;
+    self.textView.textAlignment = NSTextAlignmentCenter;
+}
+
+
+
 @end

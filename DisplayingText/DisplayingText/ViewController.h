@@ -20,7 +20,8 @@
 - (IBAction)setFontSize:(id)sender;
 - (IBAction)setShadowColor:(id)sender;
 - (IBAction)setDropShadow:(id)sender;
-
+- (IBAction)Alignment:(id)sender;
+- (IBAction)All:(id)sender;
 
 @end
 
