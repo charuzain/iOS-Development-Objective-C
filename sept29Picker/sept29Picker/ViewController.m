@@ -18,7 +18,10 @@
     // Do any additional setup after loading the view.
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+  
     return 5;
+    
+  
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
@@ -32,7 +35,34 @@
     return 10;
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return @"A";
+    
+    if(component == 0){
+        return @"A";
+    }
+    if(component == 1){
+        return @"B";
+    }
+    if(component == 2){
+        return @"C";
+    }
+    if(row == 0){
+        return @"1";
+    }
+    if(row == 1){
+        return @"2";
+    }
+    if(row == 1){
+        return @"2";
+    }
+    if(row == 3 && component == 4){
+        return @"charu";
+    }
+    return @"3";
+   
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    NSLog(@"Row %d compponent %d" , (int)row , (int)component);
 }
 
 @end
