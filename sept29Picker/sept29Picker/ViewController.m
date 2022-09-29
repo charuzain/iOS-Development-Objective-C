@@ -17,52 +17,61 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+// Set number of components/columns
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-  
-    return 5;
+  // give tag to pickerView
     
-  
+    if(pickerView.tag == 1){
+        return 5;
+    }
+    return 3;
+    
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    // defining number of rows in each column
-    if(component == 0){
-        return 2;
+    // Defining number of rows in each column
+    if(pickerView.tag == 1){
+        return 5;
     }
-    if(component ==1){
-        return 4;
-    }
-    return 10;
+    return 4;
+    
+    
 }
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+
+    if(pickerView.tag ==1){
+        if(component == 0){
+            return @"A";
+        }
+        else if(component == 1){
+            return @"B";
+        }
+        else if(component == 2){
+            return @"c";
+        }
+        else if(component == 4){
+            return @"D";
+        }
+        return @"D";
+    }
     
-    if(component == 0){
-        return @"A";
+    else if(pickerView.tag == 2){
+        if(component == 0){
+            return @"1";
+        }
+        else if(component == 1){
+            return @"2";
+        }
+            return @"3";
+        }
+    return @"X";
     }
-    if(component == 1){
-        return @"B";
-    }
-    if(component == 2){
-        return @"C";
-    }
-    if(row == 0){
-        return @"1";
-    }
-    if(row == 1){
-        return @"2";
-    }
-    if(row == 1){
-        return @"2";
-    }
-    if(row == 3 && component == 4){
-        return @"charu";
-    }
-    return @"3";
    
-}
+
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    NSLog(@"Row %d compponent %d" , (int)row , (int)component);
+    NSLog(@" Picker %ld Row %d compponent %d" ,(long)[pickerView tag] ,(int)row , (int)component);
 }
 
 @end
